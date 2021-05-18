@@ -1,7 +1,7 @@
 {
   "name": "hoverbox",
   "version": "0.0.0-alpha.0",
-  "description": "A compact tool to show information on hover",
+  "description": "A compact tool to reveal information on hover",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
