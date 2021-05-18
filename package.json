@@ -1,0 +1,30 @@
+{
+  "name": "hoverbox",
+  "version": "0.0.0-alpha.0",
+  "description": "A compact tool to show information on hover",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TopMarksDevelopment/javascript.hoverbox.git"
+  },
+  "keywords": [
+    "hover over",
+    "hover reveal",
+    "vanilla js hover"
+  ],
+  "author": "TopMarksDevelopment",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TopMarksDevelopment/Javascript.HoverBox/issues"
+  },
+  "homepage": "https://github.com/TopMarksDevelopment/Javascript.HoverBox#readme",
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "hoverposition": "file:../HoverPosition"
+  }
+}
