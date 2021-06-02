@@ -1,4 +1,4 @@
-import { CombinedAlignment, PositionAlignment, PositionCollision } from "hover-position";
+import { CombinedAlignment, PositionAlignment, PositionCollision } from "@topmarksdevelopment/hover-position";
 
 export default interface HoverOptions {
     setMy?: PositionAlignment;
