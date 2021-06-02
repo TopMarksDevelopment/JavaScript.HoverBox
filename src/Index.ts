@@ -82,7 +82,7 @@ export class HoverBox {
                 my: this._options.setMy ?? "top center",
                 at: this._options.at ?? "bottom center",
                 anchor: t,
-                hoverBox: hoverBox,
+                target: hoverBox,
                 collision: this._options?.collision,
                 bestFitPreference: this._options?.bestFitPreference,
                 defaults: this._options?.defaults,
