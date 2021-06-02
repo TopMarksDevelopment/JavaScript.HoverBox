@@ -1,4 +1,4 @@
-import { HoverPosition } from "hoverposition";
+import { HoverPosition } from "hover-position";
 import HoverOptions from "./Interfaces/HoverOptions";
 
 export class HoverBox {

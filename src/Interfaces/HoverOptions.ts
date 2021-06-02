@@ -1,4 +1,4 @@
-import { CombinedAlignment, PositionAlignment, PositionCollision } from "hoverposition";
+import { CombinedAlignment, PositionAlignment, PositionCollision } from "hover-position";
 
 export default interface HoverOptions {
     setMy?: PositionAlignment;
