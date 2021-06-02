@@ -2,7 +2,10 @@
 
 A simple package to reveal some extra information on hover
 
-> ⚠ There is still some CSS to add to the package. For now, you can implement the styling how you see fit
+> ⚠ **This package is still under development**
+> Although it's in a usable state, there is still a little work to do - just to refine it
+> - Primarily, there is CSS to add to the package, document changes and some more testing
+>   - For now, you can implement the styling how you see fit and submit issues for any problems you find
 
 ## Usage
 
