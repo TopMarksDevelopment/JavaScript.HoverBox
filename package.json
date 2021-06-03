@@ -1,30 +1,45 @@
 {
   "name": "hoverbox",
-  "version": "0.0.0-alpha.0",
   "description": "A compact tool to reveal information on hover",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TopMarksDevelopment/javascript.hoverbox.git"
-  },
+  "author": "TopMarksDevelopment",
+  "version": "0.0.0-alpha.1",
+  "preview": true,
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "keywords": [
     "hover over",
     "hover reveal",
     "vanilla js hover"
   ],
-  "author": "TopMarksDevelopment",
-  "license": "MIT",
+  "homepage": "https://github.com/TopMarksDevelopment/Javascript.HoverBox#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TopMarksDevelopment/javascript.hoverbox.git"
+  },
   "bugs": {
     "url": "https://github.com/TopMarksDevelopment/Javascript.HoverBox/issues"
   },
-  "homepage": "https://github.com/TopMarksDevelopment/Javascript.HoverBox#readme",
+  "files": [
+    "lib/**",
+    "package-lock.json"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint ./src --ext .ts",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint"
+  },
   "devDependencies": {
-    "typescript": "^4.2.4"
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.27.0",
+    "prettier": "^2.3.0",
+    "typescript": "^4.3.2"
   },
   "dependencies": {
-    "@topmarksdevelopment/hover-position": "0.0.0-alpha.0"
+    "@topmarksdevelopment/hover-position": "0.0.0-alpha.1"
   }
 }
