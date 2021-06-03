@@ -1,5 +1,5 @@
-# Compiled builds
-build/
+# Compiled project
+lib/
 
 # Dependency directories
 node_modules/
