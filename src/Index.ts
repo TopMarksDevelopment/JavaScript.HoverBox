@@ -10,11 +10,11 @@ export class HoverBox {
 	/**
 	 * Setup hoverbox events and start listening
 	 * @param selector The selector to find the child that contains the text to show
-	 * @param defaultOptions The default options to apply
+	 * @param options The default options to apply
 	 */
-	constructor(selector: string, defaultOptions?: HoverOptions) {
+	constructor(selector: string, options?: HoverOptions) {
 		this._selector = selector;
-		this._options = Object.assign({}, defaultOptions);
+		this._options = Object.assign({}, options);
 		this._timeouts = {};
 
 		this.startListening();
@@ -65,7 +65,7 @@ export class HoverBox {
 	private handleHoverBoxAnimation(t: HTMLElement, showOrHide: 'show' | 'hide'): void {
 		const hoverBox = this.getHoverBox(t, showOrHide);
 
-		if (hoverBox === null) {
+		if (!hoverBox) {
 			return;
 		}
 
@@ -79,9 +79,9 @@ export class HoverBox {
 				at: this._options.at ?? 'bottom center',
 				anchor: t,
 				target: hoverBox,
-				collision: this._options?.collision,
-				bestFitPreference: this._options?.bestFitPreference,
-				defaults: this._options?.defaults,
+				collision: this._options.collision,
+				bestFitPreference: this._options.bestFitPreference,
+				defaults: this._options.defaults,
 			});
 
 			// apply new position
