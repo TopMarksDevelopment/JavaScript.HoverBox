@@ -30,5 +30,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 **This was the first release**
 
-[unreleased]: https://github.com/TopMarksDevelopment/JavaScript.HoverBox/compare/v1.0.0...development
+[unreleased]: https://github.com/TopMarksDevelopment/JavaScript.HoverBox/compare/v1.0.0...main
 [1.0.0]: https://github.com/TopMarksDevelopment/JavaScript.HoverBox/release/tag/v1.0.0
