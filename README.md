@@ -2,28 +2,52 @@
 
 A simple package to reveal some extra information on hover
 
-> ⚠ **This package is still under development**
->
-> Although it's in a usable state, there is still a little work to do - just to refine it
-> - Primarily, there is CSS to add to the package, document changes and some more testing
->   - For now, you can implement the styling how you see fit and submit issues for any problems you find
+### Links
+- [Change log](./CHANGELOG.md)
+- [License (MIT)](./LICENSE)
 
 ## Usage
 
 Add the below to your code to your project and you're away
 
 ```TS
-const hB = new HoverBox(".HoverBox");
+const hb = new HoverBox(".HoverBox");
+const hbWithOptions = new HoverBox(".HoverBox", options); // if you have options
 
 // Inside some other functions somewhere
-hB.startListening();
-hB.stopListening();
+hb.startListening();
+hb.stopListening();
 ```
 
-## Changes
+## Options
 
-You can see all the changes in our [change log](./CHANGELOG.md)
+Option | Type | Default | Description
+---|---|---|---
+setMy? | [Type: pA][PositionAlignment] | `top center` | The part of the popup linked the anchor
+at? | [Type: pA][PositionAlignment] | `bottom center` | The part of the anchor that the target should link to
+keepOpen? | boolean | `true` | If the mouse moves into the popup, keep it open
+allowHtml? | boolean | `false` | The text provided can be treated as safe HTML
+transitionDelay? | number | `333` | The delay before we start the transition
+transitionDuration? | number | `333` | Must match the CSS transition property
+**HoverPosition specific**
+collision? | [PositionCollision](#type-positioncollision) | `bestfit` | How to handle the popup colliding with the window edge
+bestFitPreference? | `horizontal` OR `vertical` | `horizontal` | The preferred direction to try `bestfit` first
+defaults? | { my: [pA][PositionAlignment]; at: [pA][PositionAlignment]; } | Same as `setMy` & `at` respectively | Defaults to use if parsing of `setMy` or `at` fails
 
-## License
+### Type: `PositionAlignment`
 
-This extension is licensed under the [MIT License](./LICENSE)
+Where to position an element. Use either: `top`, `bottom`, `center`, `left` or `right`. You can also specify a vertical and horizontal alignment like `top right`, `bottom right` or `center left`.
+
+
+Using a single value will default the other to `center` so `left` == `center left`
+
+### Type: `PositionCollision`
+
+How to handle any collisions, either:
+
+- `bestFit`: find the best fit before trying to flip the element
+- `flipFit`: flip the element completely vertically and horizontally
+- `ignore`: ignore any collisions and just carry on
+
+
+[PositionAlignment]: #type-positionalignment
