@@ -194,20 +194,20 @@ export class HoverBox {
 			this._timeouts[`${hoverBox.id}_hide`] = null;
 
 			clearTimeout(timeoutId);
-		} else {
-			timeoutId = setTimeout(() => {
-				hoverBox.dataset.state = 'hidden';
-				hoverBox.style.opacity = '0';
-
-				this._timeouts[`${hoverBox.id}_hide`] = setTimeout(() => {
-					this._timeouts[`${hoverBox.id}_hide`] = null;
-
-					hoverBox.style.display = 'none';
-				}, this._options.transitionDuration ?? 333);
-			}, this._options.transitionDelay ?? 333);
-
-			this._timeouts[`${hoverBox.id}_hide`] = timeoutId;
 		}
+		
+		timeoutId = setTimeout(() => {
+			hoverBox.dataset.state = 'hidden';
+			hoverBox.style.opacity = '0';
+
+			this._timeouts[`${hoverBox.id}_hide`] = setTimeout(() => {
+				this._timeouts[`${hoverBox.id}_hide`] = null;
+
+				hoverBox.style.display = 'none';
+			}, this._options.transitionDuration ?? 333);
+		}, this._options.transitionDelay ?? 333);
+
+		this._timeouts[`${hoverBox.id}_hide`] = timeoutId;
 	}
 
 	/** ## Event handlers */
