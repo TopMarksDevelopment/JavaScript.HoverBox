@@ -1,15 +1,19 @@
-import { CombinedAlignment, PositionAlignment, PositionCollision } from '@topmarksdevelopment/hover-position';
+import {
+    CombinedAlignment,
+    Alignment,
+    CollisionHandler,
+} from '@topmarksdevelopment/position';
 
-export default interface HoverOptions {
-	setMy?: PositionAlignment;
-	at?: PositionAlignment;
-	keepOpen?: boolean;
-	allowHtml?: boolean;
-	transitionDelay?: number;
-	transitionDuration?: number;
+export interface HoverOptions {
+    setMy?: Alignment;
+    at?: Alignment;
+    keepOpen?: boolean;
+    allowHtml?: boolean;
+    transitionDelay?: number;
+    transitionDuration?: number;
 
-	// HoverPosition specific
-	collision?: PositionCollision;
-	bestFitPreference?: 'horizontal' | 'vertical';
-	defaults?: { my: CombinedAlignment; at: CombinedAlignment };
+    // HoverPosition specific
+    collision?: CollisionHandler;
+    bestFitPreference?: 'horizontal' | 'vertical';
+    defaults?: { my: CombinedAlignment; at: CombinedAlignment };
 }
