@@ -3,12 +3,16 @@
 A simple package to reveal some extra information on hover
 
 ### Links
-- [Change log](./CHANGELOG.md)
-- [License (MIT)](./LICENSE)
+
+-   [Options](#options)
+-   [Change log](./CHANGELOG.md)
+-   [License (MIT)](./LICENSE)
 
 ## Usage
 
 Add the below to your code to your project and you're away
+
+_Note:_ by default, we're listening upon construction
 
 ```TS
 const hb = new HoverBox(".HoverBox");
@@ -21,33 +25,74 @@ hb.stopListening();
 
 ## Options
 
-Option | Type | Default | Description
----|---|---|---
-setMy? | [Type: pA][PositionAlignment] | `top center` | The part of the popup linked the anchor
-at? | [Type: pA][PositionAlignment] | `bottom center` | The part of the anchor that the target should link to
-keepOpen? | boolean | `true` | If the mouse moves into the popup, keep it open
-allowHtml? | boolean | `false` | The text provided can be treated as safe HTML
-transitionDelay? | number | `333` | The delay before we start the transition
-transitionDuration? | number | `333` | Must match the CSS transition property
-**HoverPosition specific**
-collision? | [PositionCollision](#type-positioncollision) | `bestfit` | How to handle the popup colliding with the window edge
-bestFitPreference? | `horizontal` OR `vertical` | `horizontal` | The preferred direction to try `bestfit` first
-defaults? | { my: [pA][PositionAlignment]; at: [pA][PositionAlignment]; } | Same as `setMy` & `at` respectively | Defaults to use if parsing of `setMy` or `at` fails
+### setMy?: [`alignment`][alignment]
 
-### Type: `PositionAlignment`
+The part of the popup linked to `at`  
+**Default:** `top center`
 
-Where to position an element. Use either: `top`, `bottom`, `center`, `left` or `right`. You can also specify a vertical and horizontal alignment like `top right`, `bottom right` or `center left`.
+### at?: [`alignment`][alignment]
 
+The part of the anchor `setMy` will "attach" to  
+**Default:** `bottom center`
+
+### keepOpen?: `boolean`
+
+If the mouse moves into the popup, keep the pop-up open  
+**Default:** `true`
+
+### allowHtml?: `boolean`
+
+The text provided can be treated as safe HTML  
+**Default:** `false`
+
+### transitionDelay?: `number`
+
+The delay before we start the transition (in milliseconds)  
+**Default:** `333`
+
+### transitionDuration?: `number`
+
+A link to the transition duration (in milliseconds). This must match the CSS transition property or the element  
+**Default:** `333`
+
+### collision?: [`CollisionHandler`](#the-collisionhandler-type)
+
+How to handle the popup colliding with the window edge  
+**Default:** `bestfit`  
+**Note:** This is just passed straight to the underlying [Position](https://github.com/TopMarksDevelopment/JavaScript.Position) module
+
+### bestFitPreference?: `horizontal` OR `vertical`
+
+The preferred direction to try `bestfit` first  
+**Default:** `horizontal`  
+**Note:** This is just passed straight to the underlying [Position](https://github.com/TopMarksDevelopment/JavaScript.Position) module
+
+### defaults?: `{ my: `[`alignment`][alignment]`, at: `[`alignment`][alignment]` }`
+
+The fallback values when only one property is supplied, or the property supplied is invalid  
+**Default:** Same as `setMy` & `at` respectively  
+**Note:** This is just passed straight to the underlying [Position](https://github.com/TopMarksDevelopment/JavaScript.Position) module
+
+## Types
+
+### The `Alignment` type
+
+The `Alignment` will allow any of the below, plus a combination in the form `vertical horizontal` (e.g. `top center`, `bottom right` or `center left`)
+
+-   `top`
+-   `bottom`
+-   `center`
+-   `left`
+-   `right`
 
 Using a single value will default the other to `center` so `left` == `center left`
 
-### Type: `PositionCollision`
+### The `CollisionHandler` type
 
 How to handle any collisions, either:
 
-- `bestFit`: find the best fit before trying to flip the element
-- `flipFit`: flip the element completely vertically and horizontally
-- `ignore`: ignore any collisions and just carry on
+-   `bestFit`: find the best fit before trying to flip the element
+-   `flipFit`: flip the element completely vertically and horizontally
+-   `ignore`: ignore any collisions and just carry on
 
-
-[PositionAlignment]: #type-positionalignment
+[alignment]: #the-alignment-type
