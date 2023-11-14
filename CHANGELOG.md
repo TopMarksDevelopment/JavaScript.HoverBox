@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
--   Element is now correctly aligned when a user scrolls
+-   Element is now correctly positioned when the window has scrolled
 
 ### Updated
 
