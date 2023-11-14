@@ -2,7 +2,7 @@
     "name": "@topmarksdevelopment/hover-box",
     "description": "A compact tool to reveal information on hover",
     "author": "TopMarksDevelopment",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "license": "MIT",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
