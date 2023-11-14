@@ -83,6 +83,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 **This was the first release**
 
+[2.0.1]: https://github.com/TopMarksDevelopment/JavaScript.HoverBox/release/tag/v2.0.1
+[comp:2.0.1]: https://github.com/TopMarksDevelopment/JavaScript.HoverBox/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/TopMarksDevelopment/JavaScript.HoverBox/release/tag/v2.0.0
 [comp:2.0.0]: https://github.com/TopMarksDevelopment/JavaScript.HoverBox/compare/v1.0.1...v2.0.0
 [1.0.1]: https://github.com/TopMarksDevelopment/JavaScript.HoverBox/release/tag/v1.0.1
